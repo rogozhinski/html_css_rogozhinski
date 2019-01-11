@@ -35,9 +35,6 @@ html {
 .modal-wrapper {
   font-family: Poppins-Regular, sans-serif;
   position: relative;
-  left: 0;
-  right: 0;
-  top: 0;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -49,19 +46,7 @@ html {
   flex-direction: row;
   width: 1120px;
   margin: 15px;
-}
-
-@media (max-width: 992px){
-  .modal {
-    width: 100%;
-  }
-}    
-
-@media (max-width: 768px){
-  .modal {
-    flex-direction: column-reverse;
-  }  
-}  
+} 
 
 .contact-info {
   flex-grow: 1;
@@ -75,28 +60,10 @@ html {
   padding: 25px;
 }
 
-@media (max-width: 992px){
-  .contact-info {
-    width: 40%;
-  }
-}
-
-@media (max-width: 768px){
-  .contact-info {
-    width: 100%;
-  }    
-}
-
 .contact-info-item {
   display: flex;
   flex-direction: row;
   margin: 0 0 45px 20%;
-}
-
-@media (max-width: 992px){
-  .contact-info-item {
-    margin: 0 0 45px 0;
-  }
 }
 
 .contact-info-item:last-child {
@@ -108,10 +75,6 @@ html {
   width: 30px;
   padding-right: 20px;
   display: block;
-}
-
-.contact-info-item__content{
-
 }
 
 .contact-info-item__title {
@@ -141,26 +104,6 @@ html {
   width: 50%;
 }
 
-@media (max-width: 992px){
-  .user-form {
-    width: 60%;
-    padding: 55px 30px;
-  }
-}
-
-@media (max-width: 768px){
-  .user-form {
-    width: 100%;
-    padding: 55px 30px;
-  }
-}
-
-@media (max-width: 576px){
-  .user-form {
-    padding: 55px 15px;
-  }  
-}
-
 .user-form-title{
   font-size: 30px;
   margin-bottom: 25px;
@@ -186,11 +129,6 @@ html {
   width: 100%;
 }
 
-@media (max-width: 576px){
-  .user-form-names {
-    flex-direction: column;
-  }
-}
 
 .input_superclass{
   padding: 12px;
@@ -200,27 +138,17 @@ html {
   outline: thin solid transparent;
   outline-offset: 15px;
   width: 100%;
+  border: 1px solid #cccccc;
 }
 
 .input_superclass:focus{
+  border: 1px solid transparent;
   outline: thin solid #00ad5f;
   outline-offset: 0px;
 }
 
-@media (max-width: 576px){
-  .user-form-names__input {
-    width: 100%;
-  }
-}
-
 .user-form-names__input:last-child{
   margin-left: 25px; 
-}
-
-@media (max-width: 992px){
-  .user-form-names__input:last-child {
-    margin-left: 0;
-  }
 }
 
 .user-form-item__button{
@@ -236,4 +164,59 @@ html {
 
 .user-form-item__button:hover{
   background: #333333;
+}
+
+@media (max-width: 992px){
+
+  .modal {
+    width: 100%;
+  }
+
+  .contact-info {
+    width: 40%;
+  }  
+
+  .contact-info-item {
+    margin: 0 0 45px 0;
+  }
+
+  .user-form {
+    width: 60%;
+    padding: 55px 30px;
+  }
+
+  .user-form-names__input:last-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px){
+
+  .modal {
+    flex-direction: column-reverse;
+  }  
+
+  .contact-info {
+    width: 100%;
+  }   
+
+  .user-form {
+    width: 100%;
+    padding: 55px 30px;
+  }
+}
+
+@media (max-width: 576px){
+
+  .user-form {
+    padding: 55px 15px;
+  }  
+
+  .user-form-names {
+    flex-direction: column;
+  }
+
+  .user-form-names__input {
+    width: 100%;
+  }
 }
